@@ -1,0 +1,10 @@
+[copr:copr.fedorainfracloud.org:isc:bind]
+name=Copr repo for bind owned by isc
+baseurl=https://download.copr.fedorainfracloud.org/results/isc/bind/epel-7-$basearch/
+type=rpm-md
+skip_if_unavailable=True
+gpgcheck=1
+gpgkey=https://download.copr.fedorainfracloud.org/results/isc/bind/pubkey.gpg
+repo_gpgcheck=0
+enabled=1
+enabled_metadata=1
