@@ -7,6 +7,9 @@ RUN yum update -y
 RUN yum install -y isc-bind
 
 RUN yum install -y mc
+RUN yum autoremove && yum clean all
 
-#COPY --chown=user:group
+RUN mv /etc/opt/isc/isc-bind/named.conf /etc/opt/isc/isc-bind/named.conf_old
 COPY --chown=root:named etc/opt /etc/opt
+
+CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "bind"]
