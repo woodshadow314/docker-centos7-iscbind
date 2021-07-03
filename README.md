@@ -1,0 +1,1 @@
+DNS сервер основанный на ISC BIND 9.16.18 и docker image centos:7
