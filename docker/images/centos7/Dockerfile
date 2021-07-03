@@ -13,4 +13,4 @@ RUN yum clean all
 RUN mv /etc/opt/isc/isc-bind/named.conf /etc/opt/isc/isc-bind/named.conf_old
 COPY --chown=root:named etc/opt /etc/opt
 
-CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "bind"]
+CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "named"]
