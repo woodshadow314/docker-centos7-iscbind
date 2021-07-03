@@ -1,4 +1,4 @@
-FROM centos:7
+FROM centos:7.9.2009
 
 COPY etc/yum.repos.d /etc/yum.repos.d
 RUN rm -f /etc/localtime && ln -s /usr/share/zoneinfo/Europe/Moscow /etc/localtime
