@@ -17,4 +17,4 @@ RUN chown root:named /var/log/named
 RUN chmod g+w /var/log/named
 RUN echo "" > /var/log/named/default.log
 
-CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "named"]
+#CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "named"]
