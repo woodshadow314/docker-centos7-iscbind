@@ -12,10 +12,10 @@ RUN yum clean all
 
 RUN mv /etc/opt/isc/isc-bind/named.conf /etc/opt/isc/isc-bind/named.conf_old
 COPY --chown=root:named etc/opt /etc/opt
-RUN mkdir -p /var/log/named
-RUN chown root:named /var/log/named
 
-RUN echo "" > /var/log/named/default.log
-RUN chmod g+w /var/log/named/*
+#RUN mkdir -p /var/log/named
+#RUN chown root:named /var/log/named
+#RUN echo "" > /var/log/named/default.log
+#RUN chmod g+w /var/log/named/*
 
 CMD ["/opt/isc/isc-bind/root/usr/sbin/named", "-g", "-c", "/etc/opt/isc/isc-bind/named.conf", "-u", "named"]
